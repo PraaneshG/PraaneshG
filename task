@@ -1,0 +1,2 @@
+groupby_df = (df.groupby(['item_name'])['item_name'].agg(['count']).sort_values(by='count', ascending=False).reset_index().drop_duplicates('item_name', keep='first'))
+groupby_df
