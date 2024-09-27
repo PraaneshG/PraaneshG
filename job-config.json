@@ -1,9 +1,9 @@
 {
   "name": "CD pipeline",
-  "existing_cluster_id": "your_cluster_id",
+  "existing_cluster_id": "0925-090525-plj0xq08",
   "timeout_seconds": 1200,
   "max_retries": 3,
   "notebook_task": {
-    "notebook_path": "/Workspace/Users/your_username/your_notebook"
+    "notebook_path": "/Workspace/Users/gpraanesh31@outlook.com/GitIntergration"
   }
 }
