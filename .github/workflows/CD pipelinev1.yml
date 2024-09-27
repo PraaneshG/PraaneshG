@@ -28,13 +28,13 @@ jobs:
        ${{ secrets.DATABRICKS_TOKEN }}
        EOF
    - name: Upload Notebook to DBFS
-     run: databricks fs cp /sample_sales_notebook.dbc/Workspace/Users/gpraanesh31@outlook.com/GitIntergration --overwrite
+     run: databricks fs cp /sample_sales_notebook.dbc /Workspace/Users/gpraanesh31@outlook.com/GitIntergration --overwrite
      env:
        DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
 
    - name: Run Databricks Job
      run: |
        databricks jobs create --json-file job-config.json
-       databricks jobs run-now --job-id $(databricks jobs list | grep 'CD pipeline' | awk '{print $1}')
+       databricks jobs run-now --job-id $(databricks jobs list | grep 'CD pipelinev1' | awk '{print $1}')
      env:
        DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
